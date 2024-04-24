@@ -80,16 +80,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_co8oc")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 sprite_frames = SubResource("SpriteFrames_yg1jj")
 animation = &"Idle"
 autoplay = "Idle"
 frame = 6
-frame_progress = 0.285931
+frame_progress = 0.648514
+flip_h = true

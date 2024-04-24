@@ -1,22 +1,84 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvnpioiijvjfk"]
+[gd_scene load_steps=7 format=3 uid="uid://bvnpioiijvjfk"]
 
 [ext_resource type="PackedScene" uid="uid://dk8h36fovnmv3" path="res://bg.tscn" id="1_d02gu"]
+[ext_resource type="Texture2D" uid="uid://b4pti2o2kpps3" path="res://scn/Shop_icon/Icon7.png" id="2_63opx"]
+[ext_resource type="Texture2D" uid="uid://xiadv3pvx52l" path="res://scn/Shop_icon/Icon6.png" id="3_em0ib"]
+[ext_resource type="Texture2D" uid="uid://c3inqd3x6pj4c" path="res://scn/Shop_icon/Icon9.png" id="4_o036n"]
+[ext_resource type="Texture2D" uid="uid://vonhvl4s4150" path="res://scn/Shop_icon/Icon20.png" id="5_5soki"]
+[ext_resource type="Texture2D" uid="uid://dudpxj74jouey" path="res://scn/Shop_icon/Icon40.png" id="6_t4iq1"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="BG" parent="." instance=ExtResource("1_d02gu")]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 434.0
-offset_top = 16.0
-offset_right = 653.0
-offset_bottom = 85.0
+[node name="shop" type="Label" parent="."]
+offset_left = 473.0
+offset_top = 14.0
+offset_right = 692.0
+offset_bottom = 83.0
 theme_override_font_sizes/font_size = 50
 text = "Магазин"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 36.0
-offset_top = 97.0
-offset_right = 1126.0
-offset_bottom = 628.0
+offset_left = 265.0
+offset_top = 89.0
+offset_right = 931.0
+offset_bottom = 620.0
 color = Color(1, 1, 1, 0.670588)
+
+[node name="Icon_green" type="Sprite2D" parent="."]
+position = Vector2(371, 147)
+scale = Vector2(2, 2)
+texture = ExtResource("2_63opx")
+
+[node name="Icon_black" type="Sprite2D" parent="."]
+position = Vector2(371.375, 251.375)
+scale = Vector2(2, 2)
+texture = ExtResource("3_em0ib")
+
+[node name="Icon_blue" type="Sprite2D" parent="."]
+position = Vector2(372.375, 351.375)
+scale = Vector2(2, 2)
+texture = ExtResource("4_o036n")
+
+[node name="Icon_red" type="Sprite2D" parent="."]
+position = Vector2(375.375, 456.375)
+scale = Vector2(2, 2)
+texture = ExtResource("5_5soki")
+
+[node name="Icon_purple" type="Sprite2D" parent="."]
+position = Vector2(375.375, 560.375)
+scale = Vector2(2, 2)
+texture = ExtResource("6_t4iq1")
+
+[node name="green" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 116.0
+offset_right = 709.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0, 0.635294, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.239216, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Зелье \"Ускорение\""
+vertical_alignment = 1
+
+[node name="red" type="Label" parent="."]
+offset_left = 458.0
+offset_top = 441.0
+offset_right = 680.0
+offset_bottom = 476.0
+theme_override_colors/font_color = Color(0.788235, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.113725, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Зелье \"Здоровье\""
+vertical_alignment = 1
+
+[node name="Button_buy" type="Button" parent="."]
+offset_left = 804.0
+offset_top = 123.0
+offset_right = 908.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 0.635294, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.207843, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Купить"
