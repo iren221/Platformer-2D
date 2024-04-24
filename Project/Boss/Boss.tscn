@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://dyh8r1hkw0eas"]
+
+[ext_resource type="Texture2D" uid="uid://b2ocaqbsgayvj" path="res://Boss/NightBorne.png" id="1_8r52w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_co8oc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pewqp"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udcwr"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmq46"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eohjw"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kf4f"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srr3s"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hockr"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qpf5"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(560, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0iy5"]
+atlas = ExtResource("1_8r52w")
+region = Rect2(640, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yg1jj"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pewqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udcwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmq46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eohjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kf4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srr3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hockr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qpf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0iy5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_co8oc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+sprite_frames = SubResource("SpriteFrames_yg1jj")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 6
+frame_progress = 0.285931

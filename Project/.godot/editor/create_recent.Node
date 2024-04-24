@@ -1,0 +1,15 @@
+ColorRect
+AnimatedSprite2D
+CollisionShape2D
+Area2D
+CharacterBody2D
+Label
+CanvasLayer
+Node2D
+Button
+AnimationPlayer
+TextureProgressBar
+Timer
+Camera2D
+TileMap
+ParallaxLayer

@@ -1,0 +1,14 @@
+res://menu.tscn
+res://scn/signals.gd
+res://level.tscn
+res://Player/player.tscn
+res://SlimeMob/slime_mob.tscn
+res://Money/money.tscn
+res://scn/DamageBox/damage_box.tscn
+res://SlimeMob/mob_health.tscn
+res://Boss/Boss.tscn
+res://scn/shop.tscn
+res://scn/level2.tscn
+res://SlimeMob/mob_health.gd
+res://Player/player.gd
+res://SlimeMob/slime_mob.gd
