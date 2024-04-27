@@ -1,13 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvnpioiijvjfk"]
 
 [ext_resource type="PackedScene" uid="uid://dk8h36fovnmv3" path="res://bg.tscn" id="1_d02gu"]
+[ext_resource type="Script" path="res://scn/shop.gd" id="1_khlnf"]
 [ext_resource type="Texture2D" uid="uid://b4pti2o2kpps3" path="res://scn/Shop_icon/Icon7.png" id="2_63opx"]
-[ext_resource type="Texture2D" uid="uid://xiadv3pvx52l" path="res://scn/Shop_icon/Icon6.png" id="3_em0ib"]
 [ext_resource type="Texture2D" uid="uid://c3inqd3x6pj4c" path="res://scn/Shop_icon/Icon9.png" id="4_o036n"]
 [ext_resource type="Texture2D" uid="uid://vonhvl4s4150" path="res://scn/Shop_icon/Icon20.png" id="5_5soki"]
-[ext_resource type="Texture2D" uid="uid://dudpxj74jouey" path="res://scn/Shop_icon/Icon40.png" id="6_t4iq1"]
+[ext_resource type="Script" path="res://scn/money.gd" id="5_senoa"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_khlnf")
 
 [node name="BG" parent="." instance=ExtResource("1_d02gu")]
 
@@ -20,42 +21,32 @@ theme_override_font_sizes/font_size = 50
 text = "Магазин"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 265.0
-offset_top = 89.0
-offset_right = 931.0
-offset_bottom = 620.0
+offset_left = 261.0
+offset_top = 180.0
+offset_right = 927.0
+offset_bottom = 506.0
 color = Color(1, 1, 1, 0.670588)
 
 [node name="Icon_green" type="Sprite2D" parent="."]
-position = Vector2(371, 147)
+position = Vector2(367, 238)
 scale = Vector2(2, 2)
 texture = ExtResource("2_63opx")
 
-[node name="Icon_black" type="Sprite2D" parent="."]
-position = Vector2(371.375, 251.375)
-scale = Vector2(2, 2)
-texture = ExtResource("3_em0ib")
-
 [node name="Icon_blue" type="Sprite2D" parent="."]
-position = Vector2(372.375, 351.375)
+position = Vector2(368, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("4_o036n")
 
 [node name="Icon_red" type="Sprite2D" parent="."]
-position = Vector2(375.375, 456.375)
+position = Vector2(371, 429)
 scale = Vector2(2, 2)
 texture = ExtResource("5_5soki")
 
-[node name="Icon_purple" type="Sprite2D" parent="."]
-position = Vector2(375.375, 560.375)
-scale = Vector2(2, 2)
-texture = ExtResource("6_t4iq1")
-
 [node name="green" type="Label" parent="."]
-offset_left = 456.0
-offset_top = 116.0
-offset_right = 709.0
-offset_bottom = 173.0
+offset_left = 452.0
+offset_top = 207.0
+offset_right = 705.0
+offset_bottom = 264.0
 theme_override_colors/font_color = Color(0, 0.635294, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.239216, 0, 1)
 theme_override_font_sizes/font_size = 25
@@ -63,22 +54,77 @@ text = "Зелье \"Ускорение\""
 vertical_alignment = 1
 
 [node name="red" type="Label" parent="."]
-offset_left = 458.0
-offset_top = 441.0
-offset_right = 680.0
-offset_bottom = 476.0
+offset_left = 453.625
+offset_top = 413.625
+offset_right = 675.625
+offset_bottom = 448.625
 theme_override_colors/font_color = Color(0.788235, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.113725, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Зелье \"Здоровье\""
 vertical_alignment = 1
 
-[node name="Button_buy" type="Button" parent="."]
-offset_left = 804.0
-offset_top = 123.0
-offset_right = 908.0
-offset_bottom = 160.0
+[node name="blue" type="Label" parent="."]
+offset_left = 456.625
+offset_top = 308.625
+offset_right = 633.625
+offset_bottom = 343.625
+theme_override_colors/font_color = Color(0, 0.341176, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Зелье \"Полет\""
+vertical_alignment = 1
+
+[node name="btn_buy_green" type="Button" parent="."]
+offset_left = 768.0
+offset_top = 209.0
+offset_right = 873.0
+offset_bottom = 254.0
 theme_override_colors/font_color = Color(0, 0.635294, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.207843, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Купить"
+
+[node name="btn_buy_blue" type="Button" parent="."]
+offset_left = 769.0
+offset_top = 306.0
+offset_right = 874.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0.341176, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.25098, 1)
+theme_override_font_sizes/font_size = 25
+text = "Купить"
+
+[node name="btn_buy_red" type="Button" parent="."]
+offset_left = 769.0
+offset_top = 407.0
+offset_right = 874.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0.788235, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Купить"
+
+[node name="money" type="Label" parent="."]
+offset_left = 742.0
+offset_top = 129.0
+offset_right = 860.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 30
+text = "Деньги:"
+script = ExtResource("5_senoa")
+
+[node name="back" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 83.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.686275, 0.729412, 0.94902, 1)
+theme_override_colors/font_pressed_color = Color(0.443137, 0.360784, 0.537255, 1)
+theme_override_font_sizes/font_size = 20
+text = "Назад"
+
+[connection signal="pressed" from="btn_buy_green" to="." method="_on_btn_buy_green_pressed"]
+[connection signal="pressed" from="btn_buy_blue" to="." method="_on_btn_buy_blue_pressed"]
+[connection signal="pressed" from="btn_buy_red" to="." method="_on_btn_buy_red_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

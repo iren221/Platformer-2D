@@ -2,7 +2,9 @@ extends Node2D
 
 @onready var level_text = $CanvasLayer/level_text
 @onready var animPlayer = $CanvasLayer/level_anim
-# Called when the node enters the scene tree for the first time.
+@onready var helth_player = $CanvasLayer/health_player
+@onready var helth_boss = $CanvasLayer/health_boss
+
 func _ready():
 	level_text_fade()
 	

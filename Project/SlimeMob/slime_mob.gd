@@ -84,6 +84,7 @@ func damage_state():
 func death_state():
 	animPlayer.play("Death")
 	await animPlayer.animation_finished
+	Global.money += 15
 	queue_free()
 	
 func recover_state():
