@@ -1,7 +1,8 @@
-[gd_scene load_steps=61 format=3 uid="uid://dyh8r1hkw0eas"]
+[gd_scene load_steps=62 format=3 uid="uid://dyh8r1hkw0eas"]
 
 [ext_resource type="Texture2D" uid="uid://b2ocaqbsgayvj" path="res://Boss/NightBorne.png" id="1_8r52w"]
 [ext_resource type="Script" path="res://Boss/Boss.gd" id="1_geuop"]
+[ext_resource type="PackedScene" uid="uid://dy7wlhq4s8wki" path="res://scn/DamageBox/damage_box.tscn" id="3_t2i4o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_co8oc"]
 
@@ -422,7 +423,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4414k"]
-radius = 111.018
+radius = 35.0571
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_geuop")
@@ -434,14 +435,26 @@ shape = SubResource("CapsuleShape2D_co8oc")
 position = Vector2(-1, -8)
 rotation = -0.0925025
 sprite_frames = SubResource("SpriteFrames_yg1jj")
-animation = &"Idle"
+animation = &"Attack"
 autoplay = "Idle"
+frame = 11
+frame_progress = 1.0
 flip_h = true
 
 [node name="Detector" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
 shape = SubResource("CircleShape2D_4414k")
 
-[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]
-[connection signal="body_exited" from="Detector" to="." method="_on_detector_body_exited"]
+[node name="Attack" type="Node2D" parent="."]
+
+[node name="DamageBox" parent="Attack" instance=ExtResource("3_t2i4o")]
+
+[node name="CollisionShape2D" parent="Attack/DamageBox/HitBox" index="0"]
+position = Vector2(-32, 8)
+
+[connection signal="body_shape_entered" from="Detector" to="." method="_on_detector_body_shape_entered"]
+[connection signal="body_shape_exited" from="Detector" to="." method="_on_detector_body_shape_exited"]
+
+[editable path="Attack/DamageBox"]

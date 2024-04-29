@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://b5j0tj10pp4qc"]
+[gd_scene load_steps=25 format=3 uid="uid://b5j0tj10pp4qc"]
 
 [ext_resource type="PackedScene" uid="uid://cvgi0koc4vdha" path="res://Player/player.tscn" id="1_t63xx"]
 [ext_resource type="Script" path="res://level.gd" id="1_wsqxx"]
+[ext_resource type="Script" path="res://Manager.gd" id="2_hx41q"]
 [ext_resource type="Texture2D" uid="uid://b72qnxxl4ef3u" path="res://scn/background/background_layer_1.png" id="2_svl5a"]
 [ext_resource type="Texture2D" uid="uid://bk1et8dpx54xl" path="res://scn/background/background_layer_2.png" id="3_7shst"]
 [ext_resource type="Texture2D" uid="uid://b1atst6n5hmra" path="res://scn/background/background_layer_3.png" id="4_cfp63"]
@@ -12,8 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://0pk7brsuufnw" path="res://scn/energy_bar_empty.png" id="9_tc8iu"]
 [ext_resource type="Texture2D" uid="uid://kq2rqi4ypxqh" path="res://scn/energy_bar_progress.png" id="10_atbnr"]
 [ext_resource type="PackedScene" uid="uid://c44bhg8uvtywo" path="res://scn/door.tscn" id="12_iff31"]
+[ext_resource type="PackedScene" uid="uid://b6yqgdf3f50mp" path="res://scn/UI/pause_menu.tscn" id="13_2srqx"]
 [ext_resource type="PackedScene" uid="uid://bkp0ijln0nebq" path="res://scn/spikes.tscn" id="13_4y3r1"]
 [ext_resource type="PackedScene" uid="uid://deqs0t6vf31ec" path="res://scn/fire.tscn" id="14_p0hij"]
+[ext_resource type="Script" path="res://platforms.gd" id="15_4wnni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmui4"]
 texture = ExtResource("5_l7sr8")
@@ -1398,6 +1401,10 @@ _data = {
 [node name="Level" type="Node2D"]
 script = ExtResource("1_wsqxx")
 
+[node name="Manager" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("2_hx41q")
+
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
@@ -1510,6 +1517,9 @@ texture_under = ExtResource("9_tc8iu")
 texture_progress = ExtResource("10_atbnr")
 tint_progress = Color(0.788235, 0.156863, 0.207843, 1)
 
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_2srqx")]
+process_mode = 2
+
 [node name="Collectibles" type="Node2D" parent="."]
 
 [node name="All_money" type="Node2D" parent="."]
@@ -1549,6 +1559,7 @@ position = Vector2(1359, -1)
 position = Vector2(1639, 2)
 
 [node name="platforms" type="Node2D" parent="."]
+script = ExtResource("15_4wnni")
 
 [node name="spikes" parent="platforms" instance=ExtResource("13_4y3r1")]
 position = Vector2(329, 566)
@@ -1617,3 +1628,8 @@ position = Vector2(968, 641)
 position = Vector2(984, 641)
 
 [connection signal="health_changed" from="Player/Player" to="." method="_on_player_health_changed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/VBoxContainer/Resume" to="Manager" method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/VBoxContainer/Shop" to="Manager" method="_on_shop_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/VBoxContainer/Quiet" to="Manager" method="_on_quiet_pressed"]
+
+[editable path="CanvasLayer/PauseMenu"]

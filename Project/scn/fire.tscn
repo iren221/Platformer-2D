@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://deqs0t6vf31ec"]
+[gd_scene load_steps=9 format=3 uid="uid://deqs0t6vf31ec"]
 
-[ext_resource type="Script" path="res://scn/fire.gd" id="1_bxlmp"]
 [ext_resource type="Texture2D" uid="uid://d07ufr5cf3ifj" path="res://scn/Traps/Fire/On (16x32).png" id="1_tnvq6"]
+[ext_resource type="Script" path="res://scn/fire.gd" id="1_yy0w7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4lcr"]
 size = Vector2(20, 33)
@@ -35,18 +35,27 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="fire" type="Area2D"]
-collision_layer = 4
-script = ExtResource("1_bxlmp")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pkaj"]
+size = Vector2(20, 29)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="fire" type="Area2D" parent="."]
+collision_layer = 4
+script = ExtResource("1_yy0w7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire"]
 position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_s4lcr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fire"]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_bc71h")
 frame = 1
 frame_progress = 0.259831
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_2pkaj")
+
+[connection signal="body_entered" from="fire" to="fire" method="_on_body_entered"]

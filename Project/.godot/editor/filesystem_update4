@@ -1,4 +1,3 @@
-res://Boss/Boss.tscn
 res://menu.tscn
 res://level.tscn
 res://Player/player.tscn
@@ -6,16 +5,10 @@ res://SlimeMob/slime_mob.tscn
 res://Money/money.tscn
 res://scn/DamageBox/damage_box.tscn
 res://SlimeMob/mob_health.tscn
+res://Boss/Boss.tscn
 res://scn/level2.tscn
 res://scn/shop.tscn
-res://Boss/Boss.gd
-res://scn/money.gd
-res://scn/shop.gd
-res://global.gd
-res://SlimeMob/slime_mob.gd
 res://scn/spikes.tscn
-res://level.gd
-res://Player/player.gd
+res://scn/UI/pause_menu.tscn
 res://scn/fire.tscn
-res://scn/fire.gd
-res://scn/spikes.gd
+res://scn/door.tscn
