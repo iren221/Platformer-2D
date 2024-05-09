@@ -432,11 +432,10 @@ script = ExtResource("1_jtws7")
 position = Vector2(-2, -7)
 scale = Vector2(1.53873, 1.53873)
 sprite_frames = SubResource("SpriteFrames_we5rb")
-animation = &"Run"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(3.75, 0)
 shape = SubResource("RectangleShape2D_qnqbq")
 
@@ -452,7 +451,6 @@ libraries = {
 }
 
 [node name="AttackeDirection" type="Node2D" parent="."]
-visible = false
 
 [node name="AttackRange" type="Area2D" parent="AttackeDirection"]
 collision_layer = 0

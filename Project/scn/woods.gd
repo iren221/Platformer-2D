@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,6 @@ func _process(delta):
 	pass
 
 
-func _on_fire_body_entered(body):
-	#if body.name == "Player":
-		#get_tree().change_scene_to_file("res://menu.tscn")
-	print("Вошел")
+func _on_body_entered(body):
+	if body.name == "player":
+		get_tree().change_scene_to_file("res://menu.tscn")

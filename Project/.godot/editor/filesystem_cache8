@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714415417
+::res://::1714990768
 bg.gd::GDScript::-1::1710834388::0::1::::<>ParallaxBackground<>::
 bg.tscn::PackedScene::7929751611134863054::1713455761::0::1::::<><>::res://bg.gd<>uid://b72qnxxl4ef3u::::res://scn/background/background_layer_1.png<>uid://bk1et8dpx54xl::::res://scn/background/background_layer_2.png<>uid://b1atst6n5hmra::::res://scn/background/background_layer_3.png
 Collectibles.gd::GDScript::-1::1710864705::0::1::::<>Node2D<>::
@@ -7,10 +7,10 @@ global.gd::GDScript::-1::1714230151::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::5805476983103252454::1710434525::1710434531::1::::<><>::
 Label2.gd::GDScript::-1::1713549139::0::1::::<>Label<>::
 level.gd::GDScript::-1::1714233504::0::1::::<>Node2D<>::
-level.tscn::PackedScene::4512217761555585566::1714415318::0::1::::<><>::uid://cvgi0koc4vdha::::res://Player/player.tscn<>res://level.gd<>res://Manager.gd<>uid://b72qnxxl4ef3u::::res://scn/background/background_layer_1.png<>uid://bk1et8dpx54xl::::res://scn/background/background_layer_2.png<>uid://b1atst6n5hmra::::res://scn/background/background_layer_3.png<>uid://da2umwjmtsegw::::res://scn/oak_woods_tileset.png<>uid://dje06n7ox1yfe::::res://SlimeMob/slime_mob.tscn<>uid://v4dkw4v15a1s::::res://Money/money.tscn<>res://Label2.gd<>uid://0pk7brsuufnw::::res://scn/energy_bar_empty.png<>uid://kq2rqi4ypxqh::::res://scn/energy_bar_progress.png<>uid://c44bhg8uvtywo::::res://scn/door.tscn<>uid://b6yqgdf3f50mp::::res://scn/UI/pause_menu.tscn<>uid://bkp0ijln0nebq::::res://scn/spikes.tscn<>uid://deqs0t6vf31ec::::res://scn/fire.tscn<>res://platforms.gd
+level.tscn::PackedScene::4512217761555585566::1714718515::0::1::::<><>::uid://cvgi0koc4vdha::::res://Player/player.tscn<>res://level.gd<>res://Manager.gd<>uid://b72qnxxl4ef3u::::res://scn/background/background_layer_1.png<>uid://bk1et8dpx54xl::::res://scn/background/background_layer_2.png<>uid://b1atst6n5hmra::::res://scn/background/background_layer_3.png<>uid://da2umwjmtsegw::::res://scn/oak_woods_tileset.png<>uid://dje06n7ox1yfe::::res://SlimeMob/slime_mob.tscn<>uid://v4dkw4v15a1s::::res://Money/money.tscn<>res://Label2.gd<>uid://0pk7brsuufnw::::res://scn/energy_bar_empty.png<>uid://kq2rqi4ypxqh::::res://scn/energy_bar_progress.png<>uid://c44bhg8uvtywo::::res://scn/door.tscn<>uid://b6yqgdf3f50mp::::res://scn/UI/pause_menu.tscn
 Manager.gd::GDScript::-1::1714411895::0::1::::<>Node2D<>::
 menu.gd::GDScript::-1::1713544853::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::7952759354287638848::1714415318::0::1::::<><>::res://menu.gd<>uid://dk8h36fovnmv3::::res://bg.tscn
+menu.tscn::PackedScene::7952759354287638848::1714718514::0::1::::<><>::res://menu.gd<>uid://dk8h36fovnmv3::::res://bg.tscn
 platforms.gd::GDScript::-1::1714410979::0::1::::<>Node2D<>::
 ::res://addons/::1710944888
 ::res://addons/AS2P/::1710944888
@@ -33,38 +33,44 @@ sprite_frames.gd::GDScript::-1::1710866057::0::1::::<><>::
 texture_rect.gd::GDScript::-1::1710866057::0::1::::<><>::
 _animation_importer_base.gd::GDScript::-1::1710866056::0::1::::<><>::
 _importer_base.gd::GDScript::-1::1710866056::0::1::::<>EditorImportPlugin<>::
-::res://Boss/::1714415318
-Boss.gd::GDScript::-1::1714405650::0::1::::<>CharacterBody2D<>::
-Boss.tscn::PackedScene::8860280338833650890::1714415318::0::1::::<><>::uid://b2ocaqbsgayvj::::res://Boss/NightBorne.png<>res://Boss/Boss.gd<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn
+::res://Boss/::1714718517
+Boss.gd::GDScript::-1::1714584659::0::1::::<>CharacterBody2D<>::
+Boss.tscn::PackedScene::8860280338833650890::1714718516::0::1::::<><>::uid://b2ocaqbsgayvj::::res://Boss/NightBorne.png<>res://Boss/Boss.gd<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn<>uid://dywvrwcl123w0::::res://Boss/boss_health.tscn
+boss_health.gd::GDScript::-1::1714586579::0::1::::<>Node2D<>::
+boss_health.tscn::PackedScene::8890517183464815181::1714718517::0::1::::<><>::res://Boss/boss_health.gd<>uid://dt768jyn6i77r::::res://scn/mob_healt_empty.png<>uid://4skuxcc4k45w::::res://scn/mob_healt_progress.png
 NightBorne.png::CompressedTexture2D::4310543027206636051::1713461930::1713461936::1::::<><>::
-::res://Money/::1714415318
+::res://Money/::1714718515
 money.gd::GDScript::-1::1713549259::0::1::::<>Area2D<>::
-money.tscn::PackedScene::1534033881486861814::1714415318::0::1::::<><>::res://Money/money.gd<>uid://be23014uigcxv::::res://scn/coins-chests-etc-2-0-noborders.png
-::res://Player/::1714415318
-player.gd::GDScript::-1::1714232572::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6259724278090211890::1714415318::0::1::::<><>::res://Player/player.gd<>uid://c6r6ougwiedib::::res://scn/Dog 2D/Sprite-0020.png<>uid://b61hgvftk4h5p::::res://scn/Dog 2D/Sprite-0021.png<>uid://cubnos6qtdrt5::::res://scn/Dog 2D/Sprite-0022.png<>uid://delt2gtxiqvpl::::res://scn/Dog 2D/Sprite-0029.png<>uid://cwltg737xpldx::::res://scn/Dog 2D/Sprite-0018.png<>uid://c53uvgpgi642b::::res://scn/Dog 2D/Sprite-0019.png<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn
-::res://scn/::1714415319
+money.tscn::PackedScene::1534033881486861814::1714718515::0::1::::<><>::res://Money/money.gd<>uid://be23014uigcxv::::res://scn/coins-chests-etc-2-0-noborders.png
+::res://Player/::1714718515
+player.gd::GDScript::-1::1714589433::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6259724278090211890::1714718515::0::1::::<><>::res://Player/player.gd<>uid://c6r6ougwiedib::::res://scn/Dog 2D/Sprite-0020.png<>uid://b61hgvftk4h5p::::res://scn/Dog 2D/Sprite-0021.png<>uid://cubnos6qtdrt5::::res://scn/Dog 2D/Sprite-0022.png<>uid://delt2gtxiqvpl::::res://scn/Dog 2D/Sprite-0029.png<>uid://cwltg737xpldx::::res://scn/Dog 2D/Sprite-0018.png<>uid://c53uvgpgi642b::::res://scn/Dog 2D/Sprite-0019.png<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn
+::res://scn/::1714718517
 $!_PrettyLittlePixel_Door_1_.png::CompressedTexture2D::900186186970645927::1713457460::1713457461::1::::<><>::
 Basic Tiles Only.png::CompressedTexture2D::1997170847641742801::1713545383::1713545388::1::::<><>::
 coins-chests-etc-2-0-noborders.png::CompressedTexture2D::2724660389575997851::1710862811::1711036938::1::::<><>::
 door.tres.gd::GDScript::-1::1713980636::0::1::::<>Area2D<>::
-door.tscn::PackedScene::6868258372363168898::1714415319::0::1::::<><>::uid://3ppd2s2vy2k8::::res://scn/Basic Tiles Only.png<>res://scn/door.tres.gd
+door.tscn::PackedScene::6868258372363168898::1714718517::0::1::::<><>::uid://3ppd2s2vy2k8::::res://scn/Basic Tiles Only.png<>res://scn/door.tres.gd
 energy_bar_empty.png::CompressedTexture2D::1786351152224709444::1711043087::1711043087::1::::<><>::
 energy_bar_progress.png::CompressedTexture2D::736589051828711707::1711043087::1711043087::1::::<><>::
-fire.gd::GDScript::-1::1714411492::0::1::::<>Area2D<>::
-fire.tscn::PackedScene::7474186067208353794::1714415319::0::1::::<><>::uid://d07ufr5cf3ifj::::res://scn/Traps/Fire/On (16x32).png<>res://scn/fire.gd
-level2.gd::GDScript::-1::1714154838::0::1::::<>Node2D<>::
-level2.tscn::PackedScene::4093343218863307390::1714415319::0::1::::<><>::res://scn/level2.gd<>uid://b72qnxxl4ef3u::::res://scn/background/background_layer_1.png<>uid://bk1et8dpx54xl::::res://scn/background/background_layer_2.png<>uid://b1atst6n5hmra::::res://scn/background/background_layer_3.png<>uid://da2umwjmtsegw::::res://scn/oak_woods_tileset.png<>res://Player/player.gd<>uid://dyh8r1hkw0eas::::res://Boss/Boss.tscn<>uid://c6r6ougwiedib::::res://scn/Dog 2D/Sprite-0020.png<>uid://b61hgvftk4h5p::::res://scn/Dog 2D/Sprite-0021.png<>uid://0pk7brsuufnw::::res://scn/energy_bar_empty.png<>uid://cubnos6qtdrt5::::res://scn/Dog 2D/Sprite-0022.png<>uid://kq2rqi4ypxqh::::res://scn/energy_bar_progress.png<>uid://delt2gtxiqvpl::::res://scn/Dog 2D/Sprite-0029.png<>uid://dt768jyn6i77r::::res://scn/mob_healt_empty.png<>uid://cwltg737xpldx::::res://scn/Dog 2D/Sprite-0018.png<>uid://4skuxcc4k45w::::res://scn/mob_healt_progress.png<>uid://c53uvgpgi642b::::res://scn/Dog 2D/Sprite-0019.png<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn
+fire.gd::GDScript::-1::1714577456::0::1::::<>StaticBody2D<>::
+fire.tscn::PackedScene::7474186067208353794::1714578293::0::1::::<><>::uid://d07ufr5cf3ifj::::res://scn/Traps/Fire/On (16x32).png<>res://scn/fire.gd
+level2.gd::GDScript::-1::1714584971::0::1::::<>Node2D<>::
+level2.tscn::PackedScene::4093343218863307390::1714718516::0::1::::<><>::res://scn/level2.gd<>uid://b72qnxxl4ef3u::::res://scn/background/background_layer_1.png<>uid://bk1et8dpx54xl::::res://scn/background/background_layer_2.png<>res://scn/Manager.gd<>uid://b1atst6n5hmra::::res://scn/background/background_layer_3.png<>uid://da2umwjmtsegw::::res://scn/oak_woods_tileset.png<>res://Player/player.gd<>uid://dyh8r1hkw0eas::::res://Boss/Boss.tscn<>uid://c6r6ougwiedib::::res://scn/Dog 2D/Sprite-0020.png<>uid://b61hgvftk4h5p::::res://scn/Dog 2D/Sprite-0021.png<>uid://0pk7brsuufnw::::res://scn/energy_bar_empty.png<>uid://cubnos6qtdrt5::::res://scn/Dog 2D/Sprite-0022.png<>uid://kq2rqi4ypxqh::::res://scn/energy_bar_progress.png<>uid://delt2gtxiqvpl::::res://scn/Dog 2D/Sprite-0029.png<>uid://cwltg737xpldx::::res://scn/Dog 2D/Sprite-0018.png<>uid://c53uvgpgi642b::::res://scn/Dog 2D/Sprite-0019.png<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn<>uid://b6yqgdf3f50mp::::res://scn/UI/pause_menu.tscn
+Manager.gd::GDScript::-1::1714579832::0::1::::<>Node2D<>::
 mob_healt_empty.png::CompressedTexture2D::8560851836724349985::1711043087::1711043087::1::::<><>::
 mob_healt_progress.png::CompressedTexture2D::2073279362138492006::1711043087::1711043087::1::::<><>::
 money.gd::GDScript::-1::1714228752::0::1::::<>Label<>::
 oak_woods_tileset.png::CompressedTexture2D::7216237189809375858::1710833085::1711036938::1::::<><>::
 readme.TXT::TextFile::-1::1710833085::0::1::::<><>::
 shop.gd::GDScript::-1::1714229779::0::1::::<>Node2D<>::
-shop.tscn::PackedScene::3888149100198978064::1714415319::0::1::::<><>::uid://dk8h36fovnmv3::::res://bg.tscn<>res://scn/shop.gd<>uid://b4pti2o2kpps3::::res://scn/Shop_icon/Icon7.png<>uid://c3inqd3x6pj4c::::res://scn/Shop_icon/Icon9.png<>uid://vonhvl4s4150::::res://scn/Shop_icon/Icon20.png<>res://scn/money.gd
+shop.tscn::PackedScene::3888149100198978064::1714579930::0::1::::<><>::uid://dk8h36fovnmv3::::res://bg.tscn<>res://scn/shop.gd<>uid://b4pti2o2kpps3::::res://scn/Shop_icon/Icon7.png<>uid://c3inqd3x6pj4c::::res://scn/Shop_icon/Icon9.png<>uid://vonhvl4s4150::::res://scn/Shop_icon/Icon20.png<>res://scn/money.gd
 signals.gd::GDScript::-1::1714406188::0::1::::<>Node<>::
 spikes.gd::GDScript::-1::1714233504::0::1::::<>Area2D<>::
-spikes.tscn::PackedScene::3120807487882306714::1714415319::0::1::::<><>::res://scn/spikes.gd<>uid://ojtxd8fpq364::::res://scn/Traps/Spikes/Idle.png
+spikes.tscn::PackedScene::3120807487882306714::1714718516::0::1::::<><>::res://scn/spikes.gd<>uid://ojtxd8fpq364::::res://scn/Traps/Spikes/Idle.png
+woods.gd::GDScript::-1::1714586719::0::1::::<>Area2D<>::
+woods.tscn::PackedScene::6443046208137023545::1714586893::0::1::::<><>::res://scn/woods.gd<>uid://ctecocw2jr861::::res://scn/wood_stakes.png
+wood_stakes.png::CompressedTexture2D::6114833482897146292::1714586529::1714586529::1::::<><>::
 ::res://scn/Animal/::1711036938
 otter_idle_1.png::CompressedTexture2D::7066326251614127583::1710873648::1711036938::1::::<><>::
 otter_idle_2.png::CompressedTexture2D::2787066069624428794::1710873648::1711036938::1::::<><>::
@@ -108,8 +114,8 @@ background_layer_3.png::CompressedTexture2D::4212517431898423786::1710833085::17
 ::res://scn/character/::1713457440
 $!_PrettyLittlePixel_Door_1_.png::CompressedTexture2D::6434528544724557515::1713457440::1713457440::1::::<><>::
 char_blue.png::CompressedTexture2D::2764959144809980410::1710833085::1711036938::1::::<><>::
-::res://scn/DamageBox/::1714415318
-damage_box.tscn::PackedScene::8911210197819135100::1714415318::0::1::::<><>::
+::res://scn/DamageBox/::1714718515
+damage_box.tscn::PackedScene::8911210197819135100::1714718515::0::1::::<><>::
 ::res://scn/decorations/::1711036938
 fence_1.png::CompressedTexture2D::1034894386776714994::1710833085::1711036938::1::::<><>::
 fence_2.png::CompressedTexture2D::3061090370631744098::1710833085::1711036938::1::::<><>::
@@ -291,10 +297,10 @@ Idle.png::CompressedTexture2D::1002418115637847419::1714230098::1714230104::1:::
 ::res://scn/Traps/Trampoline/::1714230104
 Idle.png::CompressedTexture2D::3150705537034799307::1714230098::1714230104::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::45778945769691074::1714230098::1714230104::1::::<><>::
-::res://scn/UI/::1714415319
-pause_menu.tscn::PackedScene::4612802255791386891::1714415319::0::1::::<><>::
-::res://SlimeMob/::1714415318
+::res://scn/UI/::1714583106
+pause_menu.tscn::PackedScene::4612802255791386891::1714583106::0::1::::<><>::
+::res://SlimeMob/::1714718515
 mob_health.gd::GDScript::-1::1713972948::0::1::::<>Node2D<>::
-mob_health.tscn::PackedScene::422126274605499146::1714415318::0::1::::<><>::uid://dt768jyn6i77r::::res://scn/mob_healt_empty.png<>res://SlimeMob/mob_health.gd<>uid://4skuxcc4k45w::::res://scn/mob_healt_progress.png
+mob_health.tscn::PackedScene::422126274605499146::1714718515::0::1::::<><>::uid://dt768jyn6i77r::::res://scn/mob_healt_empty.png<>res://SlimeMob/mob_health.gd<>uid://4skuxcc4k45w::::res://scn/mob_healt_progress.png
 slime_mob.gd::GDScript::-1::1714405650::0::1::::<>CharacterBody2D<>::
-slime_mob.tscn::PackedScene::7800793172173221774::1714415318::0::1::::<><>::uid://d2yy2umnisrmi::::res://scn/Slime/Individual Sprites/slime-die-0.png<>res://SlimeMob/slime_mob.gd<>uid://t4k7yhybyhjm::::res://scn/Slime/Individual Sprites/slime-die-1.png<>uid://4of8slvw7bl0::::res://scn/Slime/Individual Sprites/slime-attack-0.png<>uid://bfab0r5w12h0o::::res://scn/Slime/Individual Sprites/slime-die-2.png<>uid://cq2vg7cpdysgl::::res://scn/Slime/Individual Sprites/slime-attack-1.png<>uid://o60so4a6oki7::::res://scn/Slime/Individual Sprites/slime-attack-2.png<>uid://d2isvs33okx8b::::res://scn/Slime/Individual Sprites/slime-die-3.png<>uid://baj8ruw801u6i::::res://scn/Slime/Individual Sprites/slime-idle-0.png<>uid://c17c0y3aafyk2::::res://scn/Slime/Individual Sprites/slime-attack-3.png<>uid://gqm60l0nn0ck::::res://scn/Slime/Individual Sprites/slime-idle-1.png<>uid://diee4gqpo8pek::::res://scn/Slime/Individual Sprites/slime-attack-4.png<>uid://c73rh6mkrki1x::::res://scn/Slime/Individual Sprites/slime-hurt-0.png<>uid://jrymswljvn8o::::res://scn/Slime/Individual Sprites/slime-idle-2.png<>uid://dipjwqkln730b::::res://scn/Slime/Individual Sprites/slime-idle-3.png<>uid://0kdd37u88pqx::::res://scn/Slime/Individual Sprites/slime-hurt-1.png<>uid://bnbdvmuei1fl4::::res://scn/Slime/Individual Sprites/slime-hurt-2.png<>uid://3pg1i6gipd7s::::res://scn/Slime/Individual Sprites/slime-move-0.png<>uid://b1e1vglth24vn::::res://scn/Slime/Individual Sprites/slime-hurt-3.png<>uid://du4tleebkduww::::res://scn/Slime/Individual Sprites/slime-move-1.png<>uid://7a000xui3jf7::::res://scn/Slime/Individual Sprites/slime-move-2.png<>uid://cqfnoo6dkbh86::::res://scn/Slime/Individual Sprites/slime-move-3.png<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn<>uid://gaqmf6s66k47::::res://SlimeMob/mob_health.tscn
+slime_mob.tscn::PackedScene::7800793172173221774::1714718515::0::1::::<><>::uid://d2yy2umnisrmi::::res://scn/Slime/Individual Sprites/slime-die-0.png<>res://SlimeMob/slime_mob.gd<>uid://t4k7yhybyhjm::::res://scn/Slime/Individual Sprites/slime-die-1.png<>uid://4of8slvw7bl0::::res://scn/Slime/Individual Sprites/slime-attack-0.png<>uid://bfab0r5w12h0o::::res://scn/Slime/Individual Sprites/slime-die-2.png<>uid://cq2vg7cpdysgl::::res://scn/Slime/Individual Sprites/slime-attack-1.png<>uid://o60so4a6oki7::::res://scn/Slime/Individual Sprites/slime-attack-2.png<>uid://d2isvs33okx8b::::res://scn/Slime/Individual Sprites/slime-die-3.png<>uid://baj8ruw801u6i::::res://scn/Slime/Individual Sprites/slime-idle-0.png<>uid://c17c0y3aafyk2::::res://scn/Slime/Individual Sprites/slime-attack-3.png<>uid://gqm60l0nn0ck::::res://scn/Slime/Individual Sprites/slime-idle-1.png<>uid://diee4gqpo8pek::::res://scn/Slime/Individual Sprites/slime-attack-4.png<>uid://c73rh6mkrki1x::::res://scn/Slime/Individual Sprites/slime-hurt-0.png<>uid://jrymswljvn8o::::res://scn/Slime/Individual Sprites/slime-idle-2.png<>uid://dipjwqkln730b::::res://scn/Slime/Individual Sprites/slime-idle-3.png<>uid://0kdd37u88pqx::::res://scn/Slime/Individual Sprites/slime-hurt-1.png<>uid://bnbdvmuei1fl4::::res://scn/Slime/Individual Sprites/slime-hurt-2.png<>uid://3pg1i6gipd7s::::res://scn/Slime/Individual Sprites/slime-move-0.png<>uid://b1e1vglth24vn::::res://scn/Slime/Individual Sprites/slime-hurt-3.png<>uid://du4tleebkduww::::res://scn/Slime/Individual Sprites/slime-move-1.png<>uid://7a000xui3jf7::::res://scn/Slime/Individual Sprites/slime-move-2.png<>uid://cqfnoo6dkbh86::::res://scn/Slime/Individual Sprites/slime-move-3.png<>uid://dy7wlhq4s8wki::::res://scn/DamageBox/damage_box.tscn<>uid://gaqmf6s66k47::::res://SlimeMob/mob_health.tscn

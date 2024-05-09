@@ -1,8 +1,9 @@
-[gd_scene load_steps=62 format=3 uid="uid://dyh8r1hkw0eas"]
+[gd_scene load_steps=70 format=3 uid="uid://dyh8r1hkw0eas"]
 
 [ext_resource type="Texture2D" uid="uid://b2ocaqbsgayvj" path="res://Boss/NightBorne.png" id="1_8r52w"]
 [ext_resource type="Script" path="res://Boss/Boss.gd" id="1_geuop"]
 [ext_resource type="PackedScene" uid="uid://dy7wlhq4s8wki" path="res://scn/DamageBox/damage_box.tscn" id="3_t2i4o"]
+[ext_resource type="PackedScene" uid="uid://dywvrwcl123w0" path="res://Boss/boss_health.tscn" id="4_37qhi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_co8oc"]
 
@@ -422,13 +423,163 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_pbr3i"]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6, 0.666667, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Attack"]
+}
+
+[sub_resource type="Animation" id="Animation_jig8h"]
+length = 0.625
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Damage"]
+}
+
+[sub_resource type="Animation" id="Animation_o7bn1"]
+length = 2.66667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.111111, 0.222222, 0.333333, 0.444444, 0.555556, 0.666667, 0.777778, 0.888889, 1, 1.11111, 1.22222, 1.33333, 1.44444, 1.55556, 1.66667, 1.77778, 1.88889, 2, 2.11111, 2.22222, 2.33333, 2.44444, 2.55556),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Death"]
+}
+
+[sub_resource type="Animation" id="Animation_c04my"]
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_b01b7"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Run"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_viqsc"]
+_data = {
+"Attack": SubResource("Animation_pbr3i"),
+"Damage": SubResource("Animation_jig8h"),
+"Death": SubResource("Animation_o7bn1"),
+"Idle": SubResource("Animation_c04my"),
+"Run": SubResource("Animation_b01b7")
+}
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_4414k"]
-radius = 35.0571
+radius = 98.2497
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ogcoi"]
+radius = 18.0278
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_geuop")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_co8oc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -438,23 +589,56 @@ sprite_frames = SubResource("SpriteFrames_yg1jj")
 animation = &"Attack"
 autoplay = "Idle"
 frame = 11
-frame_progress = 1.0
 flip_h = true
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_viqsc")
+}
+
 [node name="Detector" type="Area2D" parent="."]
-visible = false
+collision_layer = 5
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
 shape = SubResource("CircleShape2D_4414k")
 
 [node name="Attack" type="Node2D" parent="."]
 
+[node name="Area2D" type="Area2D" parent="Attack"]
+collision_layer = 5
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack/Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ogcoi")
+
 [node name="DamageBox" parent="Attack" instance=ExtResource("3_t2i4o")]
 
-[node name="CollisionShape2D" parent="Attack/DamageBox/HitBox" index="0"]
-position = Vector2(-32, 8)
+[node name="HurtBox" parent="Attack/DamageBox" index="0"]
+collision_layer = 32
+collision_mask = 64
 
-[connection signal="body_shape_entered" from="Detector" to="." method="_on_detector_body_shape_entered"]
-[connection signal="body_shape_exited" from="Detector" to="." method="_on_detector_body_shape_exited"]
+[node name="CollisionShape2D" parent="Attack/DamageBox/HurtBox" index="0"]
+position = Vector2(-7, 2)
+
+[node name="HitBox" parent="Attack/DamageBox" index="1"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" parent="Attack/DamageBox/HitBox" index="0"]
+position = Vector2(-34, 8)
+
+[node name="boss_health" parent="." instance=ExtResource("4_37qhi")]
+position = Vector2(-27, -25)
+scale = Vector2(0.1, 0.1)
+
+[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]
+[connection signal="body_exited" from="Detector" to="." method="_on_detector_body_exited"]
+[connection signal="body_entered" from="Attack/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Attack/DamageBox/HurtBox" to="boss_health" method="_on_hurt_box_area_entered"]
+[connection signal="area_entered" from="Attack/DamageBox/HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="damage_received_boss" from="boss_health" to="." method="_on_boss_health_damage_received_boss"]
+[connection signal="no_health_boss" from="boss_health" to="." method="_on_boss_health_no_health_boss"]
 
 [editable path="Attack/DamageBox"]

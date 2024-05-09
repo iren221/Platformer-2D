@@ -15,22 +15,24 @@ var state: int = 0:
 			IDLE:
 				idle_state()
 			ATTACK:
-				pass
+				attack_state()
 			RUN:
-				#run_state()
-				pass
+				run_state()
+				#pass
 			DAMAGE:
-				pass
+				damage_state()
 			DEATH:
-				pass
+				death_state()
 
 var speed = 100
 var chase = false
 var player
 var direction
-@onready var anim = $AnimatedSprite2D
+var damage = 50
+@onready var anim = $AnimationPlayer
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 
 
 func _physics_process(delta):
@@ -38,8 +40,8 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	#var player = $"../../Player/player"
-	player = Global.player_pos
 	move_and_slide()
+	player = Global.player_pos
 
 func idle_state():
 	anim.play("Idle")
@@ -52,13 +54,45 @@ func run_state():
 		$AnimatedSprite2D.flip_h = true
 	else:
 		$AnimatedSprite2D.flip_h = false
-	
-
-func _on_detector_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	state = RUN
-	#print("Игрок зашел в поле Босса2")
-
-
-func _on_detector_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+		
+func attack_state():
+	anim.play("Attack")
+	await anim.animation_finished
 	state = IDLE
-	#print("Игрок вышел из поля Босса2")
+	
+func death_state():
+	anim.play("Death")
+	await anim.animation_finished
+	Global.money += 200
+	queue_free()
+
+func damage_state():
+	anim.play("Damage")
+	await anim.animation_finished
+	state = IDLE
+
+func _on_area_2d_body_entered(body):
+	state = ATTACK
+	print("attack")
+
+
+func _on_detector_body_entered(body):
+	state = RUN
+
+
+func _on_detector_body_exited(body):
+	state = IDLE
+	velocity.x = 0
+
+
+func _on_hit_box_area_entered(area):
+	Signals.emit_signal("enemy_attack", damage)
+
+
+func _on_boss_health_damage_received_boss():
+	state = IDLE
+	state = DAMAGE
+
+
+func _on_boss_health_no_health_boss():
+	state = DEATH

@@ -49,6 +49,8 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	if velocity.y > 0:
 		animPlayer.play("Fall")
+	if velocity.y > 647:
+		get_tree().change_scene_to_file("res://menu.tscn")
 		
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -111,7 +113,7 @@ func _on_damage_received(enemy_damage):
 	else:
 		state = DAMAGE
 	emit_signal("health_changed", health)
-	print(health)
+
 
 func _on_hit_box_area_entered(area):
 	Signals.emit_signal("player_attack", damage_basic)

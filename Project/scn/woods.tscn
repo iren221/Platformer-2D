@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx2cbalu1snpx"]
+
+[ext_resource type="Script" path="res://scn/woods.gd" id="1_5o63u"]
+[ext_resource type="Texture2D" uid="uid://ctecocw2jr861" path="res://scn/wood_stakes.png" id="1_7abdm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiyw4"]
+size = Vector2(32, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_54hik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7abdm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="woods" type="Area2D"]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_5o63u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_iiyw4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_54hik")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
